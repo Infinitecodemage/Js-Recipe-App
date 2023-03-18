@@ -10,6 +10,10 @@ html{
     font-size: 12px;
     font-weight: 600;
 }
+.orange-div{
+    padding: 1rem;
+    background: top/contain linear-gradient(to left top, orangered, goldenrod);
+}
 
 section{
     min-height: 100vh;
@@ -20,7 +24,12 @@ section{
     justify-content: center;
 
     padding: 100px 0;
-    background-color: rgb(26, 26, 27);
+    background-color: rgb(26, 26, 27);    
+    /* clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); */
+}
+
+.add-clip{
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
 }
 
 .container{
@@ -124,6 +133,8 @@ form ion-icon{
     letter-spacing: 0.05rem;
 }
 
+
+
 .container.initial .brand{
     font-size: 7rem;
 }
@@ -155,3 +166,9 @@ form ion-icon{
     padding: 10px;
     font-size: 2rem;
 }
+
+
+::selection {
+    /* background: linear-gradient(orangered, goldenrod); */
+    background: rgba(255, 166, 0, 0.664);
+  }

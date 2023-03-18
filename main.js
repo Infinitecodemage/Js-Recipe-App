@@ -2,6 +2,8 @@ const searchForm = document.querySelector('form');
 //now searchResultDiv references to element of class 'search-result'
 const searchResultDiv = document.querySelector('.search-result');
 const container = document.querySelector('.container');
+const orangeclip = document.querySelector('.add-clip');
+
 
 let searchQuery = '';
 const APP_ID = '600cc38e';
@@ -23,7 +25,11 @@ async function fetchAPI(){
 }
 
 function generateHTML(results){
+    console.log(container.classList);
     container.classList.remove('initial');
+    // return the list of CSS classes. 
+    orangeclip.classList.remove('add-clip');
+
     let generatedHTML ='';
     results.map(result =>{
         generatedHTML +=`<div class="item">
